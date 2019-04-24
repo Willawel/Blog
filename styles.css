@@ -23,59 +23,67 @@
         transform: translate(-50%, -50%);
         color: white;
     }
+/* navigation*/
+    .nav {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;    
+    }
+    .nav-col {
+        background-color: whitesmoke;
+    }
+    /* navigation bars */
+        .nav-bar {
+            border-bottom: solid black 2px; 
+            margin: 0em 5em 0em 5em;  
+            text-align: center;
+        }
+        .nav-bar li {
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            padding: 0 2em 0 2em;
+        }
+        .nav-bar li a {
+            text-decoration: none;
+        }
+        .active {
+            text-decoration-line: underline;
+        }
+    /* page content */
+        .page-content {
+            float: right;   
+            border: solid black 1px;
+            margin-right: 5em;
+            margin-top: 5em;
+            margin-left: 1em;
+            padding: 0.5em 1em 0.5em 1em;
+            max-width: 200px;
+            background-color: white;
+        }
 /* page title */
     .page {
         border: solid grey 1px;
         width: auto;
         margin: 1em 5em 0em 5em;   
         background-color: white;   
-    }   
-/* navigation bar */
-    .nav {
-        position: sticky;
-        top: 0;
-        background-color: whitesmoke;
-        border-bottom: solid black 2px; 
-        margin: 0em 5em 0em 5em;  
         text-align: center;
+    }       
+/* text and images */
+    .container {
+        display: flex;
+        align-items: center;
+        border: solid grey 1px;
+        background: white;
+        margin: 1em 5em 0em 5em;
+        width: 73%;
+        overflow: auto;
     }
-    .nav li {
-        display: inline-block;
-        text-align: center;
-        font-weight: bold;
-        padding: 0 2em 0 2em;
+    .column-1, .column-2 {
+        float: left;
+        width: 50%;
+        margin: 1em;
     }
-    .nav li a {
-        text-decoration: none;
+    pre {
+        white-space: pre-line;
     }
-/* page holder */
-    /* page content */
-        .page-content {
-            position: fixed;       
-            top: 25%;
-            right: 88px;
-            border: solid black 1px;
-            margin-left: 5em;
-            padding: 1em;
-            max-width: 200px;
-            background-color: white;
-            z-index: 1;
-        }
-    /* text and images */
-        .container {
-            display: flex;
-            align-items: center;
-            border: solid grey 1px;
-            background: white;
-            margin: 1em 5em 0em 5em;
-            overflow: auto;
-            z-index: 2;
-        }
-        .column-1, .column-2 {
-            float: left;
-            width: 50%;
-            margin: 1em;
-        }
-        pre {
-            white-space: pre-line;
-        }
