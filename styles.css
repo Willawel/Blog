@@ -3,7 +3,7 @@
         height: 100%;
     }
     body {
-        background: white;
+        background: whitesmoke;
         overflow-x: hidden;
     }
     .banner {
@@ -23,37 +23,63 @@
         transform: translate(-50%, -50%);
         color: white;
     }
-/* navigation bar */
+/* navigation*/
     .nav {
-        position: relative;
-        background-color: white;
-        border-bottom: solid black 2px; 
-        margin: 0em 5em 0em 5em;  
-        text-align: center;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;    
     }
-    .nav li {
-        display: inline-block;
-        text-align: center;
-        font-weight: bold;
-        padding: 0 2em 0 2em;
+    .nav-col {
+        background-color: whitesmoke;
     }
-    .nav li a {
-        text-decoration: none;
-    }
-/* text and images */
+    /* navigation bars */
+        .nav-bar {
+            border-bottom: solid black 2px; 
+            margin: 0em 5em 0em 5em;  
+            text-align: center;
+        }
+        .nav-bar li {
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+            padding: 0 2em 0 2em;
+        }
+        .nav-bar li a {
+            text-decoration: none;
+        }
+        .active {
+            text-decoration-line: underline;
+        }
+    /* page content */
+        .page-content {
+            float: right;   
+            border: solid black 1px;
+            margin-right: 5em;
+            margin-top: 5em;
+            margin-left: 1em;
+            padding: 0.5em 1em 0.5em 1em;
+            max-width: 200px;
+            background-color: white;
+        }
+/* page title */
     .page {
         border: solid grey 1px;
         width: auto;
-        margin: 1em 5em 0em 5em;      
-    }
+        margin: 1em 5em 0em 5em;   
+        background-color: white;   
+        text-align: center;
+    }       
+/* text and images */
     .container {
         display: flex;
         align-items: center;
         border: solid grey 1px;
+        background: white;
         margin: 1em 5em 0em 5em;
+        width: 73%;
         overflow: auto;
     }
-      .column-1, .column-2 {
+    .column-1, .column-2 {
         float: left;
         width: 50%;
         margin: 1em;
