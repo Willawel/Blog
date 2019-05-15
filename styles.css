@@ -95,3 +95,6 @@
     pre {
         white-space: pre-line;
     }
+    img {
+        image-orientation: from-image;
+    }
