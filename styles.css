@@ -1,7 +1,7 @@
 body {
     background: whitesmoke;
 }
-/* page-content (left nav bar) */
+/* page-content table (left nav bar) */
     .page-nav {
         position: fixed;
         top: 0px;    
@@ -67,36 +67,46 @@ body {
         transform: translate(-50%, -50%);
         color: white;
     }
-/* all content page's (top nav-bar) */
-    /* navigation bars */
-        .nav-bar {
-            border-bottom: solid black 2px; 
-            text-align: center;
-            width: 80%;
-            height: 10%;
-        }
-    /* banner */
+    .footer-text a {
+        text-decoration: underline;
+        color: white;
+    }
+/* all page's (top nav-bar) */
+    .web-nav {
+        position: fixed;
+        top: 0%;
+        width: 80%;
+        right: 20%;    
+        background-color: whitesmoke;   
+    }
+    .nav-bar {
+        position: relative;
+        width: 100%;
+        height: 5%;
+        border-bottom: solid black 2px; 
+        text-align: center;
+    }
+/* actual page content (body) */
+    .content {
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        z-index: -1;
+    }
+/* style */
+    .nav-bar li {
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        padding: 0 2em 0 2em;
+    }
+    .nav-bar li a {
+        text-decoration: none;
+    }
+    .active {
+        text-decoration-line: underline;
+    }
 
-    /* page content */
-
-
-        .nav-bar li {
-            display: inline-block;
-            text-align: center;
-            font-weight: bold;
-            padding: 0 2em 0 2em;
-        }
-        .nav-bar li a {
-            text-decoration: none;
-        }
-        .active {
-            text-decoration-line: underline;
-        }
-
-
-
-
-   
 /* text and images */
     .text {
         align-items: center;
