@@ -81,8 +81,9 @@ body {
     }
     .nav-bar {
         position: relative;
-        width: 100%;
+        width: 98%;
         height: 5%;
+        margin: 0% 1%;
         border-bottom: solid black 2px; 
         text-align: center;
     }
@@ -90,49 +91,51 @@ body {
     .content {
         position: absolute;
         top: 10%;
-        width: 100%;
+        left: 1%;
+        right: 21%;
         z-index: -1;
+        margin: 1% 0%;
     }
-/* style */
-    .nav-bar li {
-        display: inline-block;
-        text-align: center;
-        font-weight: bold;
-        padding: 0 2em 0 2em;
-    }
-    .nav-bar li a {
-        text-decoration: none;
-    }
-    .active {
-        text-decoration-line: underline;
-    }
+    /* text and images */
+        .text {
+            margin: 1% 0% 1% 0%;
+            align-items: center;
+            border: solid grey 1px;
+            background: white;
+            overflow: auto;
+            text-align: center;
+        }
+        .container {
+            margin: 1% 0% 1% 0%;
+            display: flex;
+            align-items: center;
+            border: solid grey 1px;
+            background: white;
+            width: 100%;
+            overflow: auto;
+        }
+        .column-1, .column-2 {
+            float: left;
+            width: 50%;
+            margin: 1em;
+        }
 
-/* text and images */
-    .text {
-        align-items: center;
-        border: solid grey 1px;
-        background: white;
-        margin: 1em 5em 0em 5em;
-        overflow: auto;
-        text-align: center;
-    }
-    .container {
-        display: flex;
-        align-items: center;
-        border: solid grey 1px;
-        background: white;
-        margin: 1em 5em 0em 5em;
-        width: 73%;
-        overflow: auto;
-    }
-    .column-1, .column-2 {
-        float: left;
-        width: 50%;
-        margin: 1em;
-    }
-    pre {
-        white-space: pre-line;
-    }
-    img {
-        image-orientation: from-image;
-    }
+/* styles */
+.nav-bar li {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0 2em 0 2em;
+}
+.nav-bar li a {
+    text-decoration: none;
+}
+.active {
+    text-decoration-line: underline;
+}
+pre {
+    white-space: pre-line;
+}
+img {
+    image-orientation: from-image;
+}
