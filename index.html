@@ -5,88 +5,112 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Willawel - Welkom</title>
-        <link rel="stylesheet" href="styles.css">
+        <style>
+            body {
+                background: whitesmoke;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            body, html {
+                height: 100%;
+            }
+            .banner {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("foto's/banner.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                height: 40%;
+            }  
+            .banner-text {
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+            }
+            .block  {
+                border: solid black 1px;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                overflow: auto;
+                padding: 5%;
+                background-color: white;   
+                
+            }
+            .page {
+                border: solid black 1px;
+                padding: 1em;
+                margin-left: 2.5%;
+                margin-bottom: 2.5%;
+                float: left;
+                width: 33%;
+                background-color: white;   
+            }
+            @media only screen and (max-width: 500px) {
+                img {
+                    max-width: 100%;
+                    text-align: center;
+                    float: left;
+                    margin-right: 5%;
+                    margin-bottom: 5%;
+                }
+            }
+            @media only screen and (min-width: 500px) {
+                img {
+                    max-width: 50%;
+                    text-align: center;
+                    float: left;
+                    margin-right: 2.5%;
+                }
+            }
+        </style>
     </head>
     <body>
-    <!--Page content table--> 
-        <div class = page-nav>
-        <!--banner-->
-            <div class="banner">
-                <div class="banner-text">
-                    <p>
-                        <font size=20>Willawel</font><br>
-                        Gedachten murmelen
-                    </p> 
-                </div>   
-            </div>
-            <!--page tite-->
-            <div class=page-title>
-                <p><span class=title>Welkom</span></p>
-            </div>
-            <!--page content-->
-            <div class="page-content">
-                <ol>
-                    <li><a href="welkom.html#1"></a></li> 
-                    <li><a href="welkom.html#2"></a></li> 
-                    <li><a href="welkom.html#3"></a></li> 
-                    <li><a href="welkom.html#4"></a></li> 
-                    <li><a href="welkom.html#5"></a></li> 
-                    <li><a href="welkom.html#6"></a></li> 
-                    <li><a href="welkom.html#7"></a></li>
-                    <li><a href="welkom.html#8"></a></li>
-                    <li><a href="welkom.html#9"></a></li>
-                    <li><a href="welkom.html#10"></a></li>
-                    <li><a href="welkom.html#11"></a></li>
-                    <li><a href="welkom.html#12"></a></li>
-                    <li><a href="welkom.html#13"></a></li>
-                    <li><a href="welkom.html#14"></a></li>
-                </ol>
-            </div>
-            <!--footer-->
-            <div class="footer">
-                <div class="footer-text">
-                    <p>
-                        <font size=5>Save the Planet</font><br>
-                        <a href="foto's/kleur-color-de-planeet-op1-A4.pdf" dowload>Download the poster here</a>
-                    </p> 
-                </div>   
-            </div>
-        </div>   
-        <!--navigation between page's-->
-        <div class=web-nav>
-            <!--navigation bar-->
-            <div class="nav-bar">
-                <ul>
-                    <li class="active"><a href="index.html">Welkom</a></li> 
-                    <li><a href="woordwonder.html">Woordwonder</a></li> 
-                    <li><a href="280tekens-2018.html">In 280 Tekens</a></li> 
-                    <li><a href="dichtwerk.html">Dichtwerk</a></li> 
-                    <li><a href="uitkijk.html">Uitkijk</a></li> 
-                    <li><a href="klimaat-dutch.html">Save the Planet</a></li>
-                    <li><a href="gezien.html">Gezien</a></li> 
-                    <li><a href="contact.html">Contact</a></li> 
-                </ul>
-            </div> 
+        <div class="banner">
+            <div class="banner-text">
+                <p>
+                    <font size=100>Willawel</font><br>
+                    <font>Gedachten murmelen</font>
+                </p> 
+            </div>   
         </div>
-        <!--Page content-->
-        <div class=content>
-                <!--page title-->
-            <div class="text">
-                <h1 style="text-align: center">Welkom</h1>
+        <div class=block>
+            <p style="text-align: center">Over</p>
+            <img src="foto's/leaves.jpg" alt="a picture of a tree">
+            <p style="text-align: justify">            
+                <a href="">Willawel is welsh voor het ruisen van de wind in de takken en bladeren van de bomen.</a> 
+                Elke taal heeft woorden die een specifiek gevoel, een zintuiglijk waarnemen, een gedachte, een gewoonte … uitdrukken.
+                Sommige van deze woorden worden ervaren als onvertaalbaar, zoals het Vlaamse woord “gezellig” of het Duitse “Fingerspitzengefühl”.
+            </p>
+        </div>
+        <div class=block>
+            <p style="text-align: center">Content</p>
+            <div class=page>
+                Welkom
             </div>
-            <!--text element with picture (left)-->
-            <div class="container">
-                <div class="column-1">
-                    <img src="foto's/leaves.jpg" alt="a picture of a tree" style="width:100%;" >
-                </div>
-                <div class = column-2>
-                    <p>            
-                        <a href="">Willawel is welsh voor het ruisen van de wind in de takken en bladeren van de bomen.</a> 
-                        Elke taal heeft woorden die een specifiek gevoel, een zintuiglijk waarnemen, een gedachte, een gewoonte … uitdrukken.
-                        Sommige van deze woorden worden ervaren als onvertaalbaar, zoals het Vlaamse woord “gezellig” of het Duitse “Fingerspitzengefühl”.
-                    </p>
-                </div>
+            <div class=page>
+                Woordwonder
             </div>
+            <div class=page>
+                In 280 tekens
+            </div>
+            <div class=page>
+                Dichtwerk
+            </div>
+            <div class=page>
+                Uitkijk
+            </div>
+            <div class=page>
+                Save the Planet
+            </div>
+            <div class=page>
+                Gezien
+            </div>  
+            <div class=page>
+                Contact
+            </div>  
         </div>
     </body>
 </html>
