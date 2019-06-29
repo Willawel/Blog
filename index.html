@@ -39,45 +39,116 @@
                 background-color: white;   
                 
             }
-
-            @media only screen and (max-width: 500px) {
-                img {
+            @media only screen and (max-width: 350px) {
+                .imgage {
                     max-width: 100%;
                     text-align: center;
                     float: left;
                     margin-right: 5%;
                     margin-bottom: 5%;
                 }
+                .block  {
+                    border: solid black 1px;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                    overflow: auto;
+                    padding: 5%;
+                    background-color: white;   
+                    
+                }
                 .button {
                     text-align: center;
                     border: solid black 1px;
                     border-radius: 5px;
                     padding: 1em;
                     margin-left: 2.5%;
-                    margin-right: 2.5;
+                    margin-right: 2.5%;
+                    margin-bottom: 2.5%;
+                    float: left;
+                    width: 80%;
+                    background-color: white;   
+                }   
+                .button-img {
+                    max-width: 75%;
+                    margin: 2.5%;
+                } 
+            }
+            @media only screen and (min-width: 350px) and (max-width: 500px) {
+                .image {
+                    max-width: 100%;
+                    text-align: center;
+                    float: left;
+                    margin-right: 5%;
+                    margin-bottom: 5%;
+                }
+                .block  {
+                    border: solid black 1px;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                    overflow: auto;
+                    padding: 5%;
+                    background-color: white;   
+                    
+                }
+                .button {
+                    text-align: center;
+                    border: solid black 1px;
+                    border-radius: 5px;
+                    padding: 1em;
+                    margin-left: 2.5%;
+                    margin-right: 2.5%;
                     margin-bottom: 2.5%;
                     float: left;
                     width: 33%;
                     background-color: white;   
                 }
+                .button-img {
+                    max-width: 30%;
+                    margin: 1.5%;
+                }
             }
             @media only screen and (min-width: 500px) {
-                img {
+                .image {
                     max-width: 50%;
                     text-align: center;
                     float: left;
                     margin-right: 2.5%;
                 }
+                .block  {
+                    border: solid black 1px;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                    overflow: auto;
+                    padding: 1%;
+                    background-color: white;   
+                    
+                }
+                .container {
+                    display: flex;
+                    align-items: center;
+                    border: solid grey 1px;
+                    overflow: auto;
+                }
+                .column {
+                    float: left;
+                    width: 30%;
+                    margin: 3%;
+                }
                 .button {
                     text-align: center;
                     border: solid black 1px;
                     border-radius: 5px;
                     padding: 1em;
                     margin-left: 2.5%;
+                    margin-right: 2.5%;
                     margin-bottom: 2.5%;
                     float: left;
-                    width: 33%;
-                    background-color: white;   
+                    width: 75%;
+                    background-color: white; 
+                }
+                .button-img {
+                    max-width: 70%;
+                    margin: 2.5%;
                 }
             }
         </style>
@@ -93,7 +164,7 @@
         </div>
         <div class=block>
             <p style="text-align: center">Over</p>
-            <img src="foto's/leaves.jpg" alt="a picture of a tree">
+            <img src="foto's/leaves.jpg" alt="a picture of a tree" class="image">
             <p style="text-align: justify">            
                 <a href="">Willawel is welsh voor het ruisen van de wind in de takken en bladeren van de bomen.</a> 
                 Elke taal heeft woorden die een specifiek gevoel, een zintuiglijk waarnemen, een gedachte, een gewoonte … uitdrukken.
@@ -102,30 +173,73 @@
         </div>
         <div class=block>
             <p style="text-align: center">Content</p>
-            <a href="https://willawel.github.io/Blog/index.html" class=button>
-                Welkom
-            </a>
-            <a href="https://willawel.github.io/Blog/woordwonder.html" class="button">
-                Woordwonder
-            </a>
-            <a href="https://willawel.github.io/Blog/280tekens-2018.html" class=button>
-                In 280 tekens
-            </a>
-            <a href="https://willawel.github.io/Blog/dichtwerk.html" class=button>
-                Dichtwerk
-            </a>
-            <a href="https://willawel.github.io/Blog/uitkijk.html" class=button>
-                Uitkijk
-            </a>
-            <a href="https://willawel.github.io/Blog/klimaat-dutch.html" class=button>
-                Save the Planet
-            </a>
-            <a href="https://willawel.github.io/Blog/gezien.html"class=button>
-                Gezien
-            </a>  
-            <a href="https://willawel.github.io/Blog/contact.html" class=button>
-                Contact
-            </a>  
+            <div class="container">
+                <div class="column">
+                    <a href="https://willawel.github.io/Blog/index.html" class=button>
+                        <p>Welkom</p>
+                        <img src="" alt="image" class="button-img">
+                        <p>Explanation</p>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="https://willawel.github.io/Blog/woordwonder.html" class="button">
+                        <p>Woordwonder</p>
+                        <img src="" alt="image" class="button-img">
+                        <p>Explanation</p>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="https://willawel.github.io/Blog/280tekens-2018.html" class=button>
+                        <p>In 280 tekens</p>
+                        <img src="" alt="image" class="button-img">
+                        <p>Explanation</p>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="column">
+                    <a href="https://willawel.github.io/Blog/dichtwerk.html" class=button>
+                        <p>Dichtwerk</p>
+                        <img src="" alt="image" class="button-img">
+                        <p>Explanation</p>
+                    </a>
+                </div>
+                <div class=column>
+                    <a href="https://willawel.github.io/Blog/uitkijk.html" class=button>
+                        <p>Uitkijk</p>
+                        <img src="" alt="image" class="button-img">
+                        <p>Explanation</p>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="https://willawel.github.io/Blog/klimaat-dutch.html" class=button>
+                        <p>Save the Planet</p>
+                        <img src="" alt="image" class="button-img">
+                        <p>Explanation</p>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="column">
+                    <a href="https://willawel.github.io/Blog/dichtwerk.html" class=button>
+                        <p>Gezien</p>
+                        <img src="" alt="image" class="button-img">
+                        <p>Explanation</p>
+                    </a>
+                </div>
+                <div class=column>
+                    <a href="https://willawel.github.io/Blog/contact.html" class=button>
+                        <p>Contact</p>
+                        <img src="" alt="image" class="button-img">
+                        <p>Explanation</p>
+                    </a>
+                </div>
+                <div class=column>
+                    <a href="" class=button>
+                        Placeholder
+                    </a>
+                </div>
+            </div>
         </div>
     </body>
 </html>
