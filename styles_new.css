@@ -5,10 +5,12 @@
 }
 html, body {
     height: 100%;
+    width: 100%;
 }
 .Header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
 }
 .Navigation {
     background-color: lightslategray;
@@ -18,7 +20,7 @@ html, body {
 }
 .Willawel-Header {
     float: left;
-    padding: 0.5% 4%;
+    padding: 0.60% 4%;
     background-color: skyblue;
     text-align: center;
 }
