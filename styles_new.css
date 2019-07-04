@@ -1,48 +1,56 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    font-family: "Montserrat", sans-serif;
-}
-html, body {
-    height: 100%;
-    width: 100%;
-}
-.Header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-.Navigation {
-    background-color: lightslategray;
-    width: 100%;
-    position: absolute;
-    top: 0;
-}
-.Willawel-Header {
-    float: left;
-    padding: 0.60% 4%;
-    background-color: skyblue;
-    text-align: center;
-}
-.Navigation a {
-    text-decoration: none;
-    color: white;
-}
-.test {
-    float: left; 
-    padding: 2%;
-}
-.Menu {
-    position: absolute;
-    bottom: 36%;
-    background-color: lightslategray;
-    text-align: end;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    white-space: nowrap;
-}
-.Menu a {
-    padding: 2%;
-}
-
+/* General */
+    *{
+        margin: 0%;
+        padding: 0%;
+        font-family: "Montserrat", sans-serif;
+    }
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+/* Header */
+    .Header-wrap {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: lightslategray;
+        z-index: 1;
+        height: 70px;
+    }
+    .Header-Willawel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 60px;
+        width: 225px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: skyblue;
+        text-align: center;
+    }
+    .Header-wrap a {
+        text-decoration: none;
+        color: white;
+    }
+    .Header-Menu-wrap {
+        float: left; 
+        padding: 2%;
+    }
+    .Menu {
+        position: absolute;
+        top: 0;
+        left: 225px;
+        line-height: 70px;
+        background-color: lightslategray;
+        text-align: end;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    .Menu a {
+        padding: 2%;
+    }
+/* Page Content */
+    .Content {
+        padding-top: 75px;
+    }
