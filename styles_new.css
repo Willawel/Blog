@@ -9,7 +9,7 @@
         width: 100%;
     }
 /* Header */
-    .Header-wrap {
+    .Header {
         position: fixed;
         top: 0;
         width: 100%;
@@ -17,7 +17,7 @@
         z-index: 1;
         height: 70px;
     }
-    .Header-Willawel {
+    .Willawel {
         position: absolute;
         top: 0;
         left: 0;
@@ -28,13 +28,9 @@
         background-color: skyblue;
         text-align: center;
     }
-    .Header-wrap a {
+    .Header a {
         text-decoration: none;
         color: white;
-    }
-    .Header-Menu-wrap {
-        float: left; 
-        padding: 2%;
     }
     .Menu {
         position: absolute;
@@ -50,6 +46,70 @@
     .Menu a {
         padding: 2%;
     }
+    .Menu a:hover {
+        color: #0652DD;
+    }
+    #chk {
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+    .show-menu, .hide-menu {
+        background-color: skyblue;
+        width: 30px;
+        padding: 5px;
+        border-radius: 100%;
+        transition: 0.5s;
+        display: none;
+        cursor: pointer;
+    }
+    .show-menu {
+        float: right;
+        width: 30px;
+        margin-top: 15px;
+        margin-right: 25px;
+    }
+
+@media screen and (max-width:1225px) {
+    .show-menu, .hide-menu {
+        display: block;
+    }
+    .Menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 200%;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 1s;
+    }
+    .Menu a {
+        display: block;
+        padding: 20px;
+    }
+    .hide-menu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        z-index: 2;
+    }
+    #chk:checked ~ .Menu {
+        left: 0;
+        visibility: visible;
+    }
+    .Menu a:hover {
+        color: #3498db;
+    }
+    .show-menu:hover, .hide-menu:hover {
+        background-color: #3498db;
+    }
+}
 /* Page Content */
     .Content {
         padding-top: 75px;
