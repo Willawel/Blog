@@ -7,6 +7,7 @@
     html, body {
         height: 100%;
         width: 100%;
+        background: whitesmoke;
     }
 /* Header */
     .Header {
@@ -57,21 +58,20 @@
         z-index: 2;
     }
     .show-menu, .hide-menu {
-        background-color: skyblue;
         width: 30px;
         padding: 5px;
-        border-radius: 100%;
         transition: 0.5s;
         display: none;
         cursor: pointer;
     }
     .show-menu {
         float: right;
+        background-color: skyblue;
+        border-radius: 100%;
         width: 30px;
         margin-top: 15px;
         margin-right: 25px;
     }
-
 @media screen and (max-width:1225px) {
     .show-menu, .hide-menu {
         display: block;
@@ -113,4 +113,18 @@
 /* Page Content */
     .Content {
         padding-top: 75px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .block  {
+        border: solid black 1px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        overflow: auto;
+        padding: 5%;
+        background-color: white;   
+        width: 90%;
+    }
+    .block img {
+        width: 100%;
     }
