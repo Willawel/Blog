@@ -38,7 +38,6 @@
         top: 0;
         left: 225px;
         line-height: 70px;
-        background-color: lightslategray;
         text-align: end;
         text-decoration: none;
         text-transform: uppercase;
@@ -76,6 +75,67 @@
         margin-top: 15px;
         margin-right: 25px;
     }
+/* ---------------------------- */
+/* Acordeon menu */
+/* ---------------------------- */
+    .page {
+        /* border-top: 1px solid black; */
+        overflow: hidden;
+    }
+    .btn {
+        display: block;
+        /* padding: 0px 20px; */
+        /* background: skyblue; */
+        color: white;
+        position: relative;
+    }
+    /* arrow showing current acordeon menu*/
+    .btn::before {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background: skyblue;
+        left: 20;
+        bottom: -7px;
+        transform: rotate(45deg);
+    }
+    .subpage {
+        position: absolute;
+        top: 70px;
+        background:lightgray;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        max-height: 0;
+    }
+    .subpage a {
+        display: block;
+        padding: 0px 10px;
+        color: white;
+        font-size: 14px;
+        margin: 4px 0;
+        position: relative;
+        text-align: left;
+    }
+    /* subpage hover indicator */
+    .subpage a:before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 100%;
+        background: red;
+        left: 0;
+        top: 0;
+        transition: 0.3s;
+        opacity: 0;
+    }
+    .subpage a:hover::before {
+        opacity: 1;
+    }
+    .page:target .subpage {
+        max-height: 10em;
+        top: 70px;
+    }
 @media screen and (max-width:1225px) {
     .show-menu, .hide-menu {
         display: block;
@@ -103,8 +163,9 @@
     } */
     .hide-menu {
         position: absolute;
-        top: 40px;
-        right: 40px;
+        top: 15px;
+        right: 25px;
+        width: 30px;
         z-index: 2;
     }
     #chk:checked ~ .Menu {
@@ -138,7 +199,9 @@
         transform: rotate(45deg)
     }
     .subpage {
+        position: static;
         background:lightgray;
+        top: 0;
         overflow: hidden;
         transition: max-height 0.3s;
         max-height: 0;
