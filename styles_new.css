@@ -89,33 +89,26 @@
         color: white;
         position: relative;
     }
-    /* arrow showing current acordeon menu*/
-    .btn::before {
-        content: "";
-        position: absolute;
-        width: 14px;
-        height: 14px;
-        background: skyblue;
-        left: 20;
-        bottom: -7px;
-        transform: rotate(45deg);
-    }
     .subpage {
         position: absolute;
         top: 70px;
-        background:lightgray;
+        min-width: 135px;
+        background: lightgray;
         overflow: hidden;
         transition: max-height 0.3s;
         max-height: 0;
+        line-height: normal;
+        padding-top: 0px;
     }
     .subpage a {
         display: block;
-        padding: 0px 10px;
+        padding: 5px 10px;
         color: white;
         font-size: 14px;
-        margin: 4px 0;
+        margin: 10px 0;
         position: relative;
         text-align: left;
+        z-index: 1;
     }
     /* subpage hover indicator */
     .subpage a:before {
@@ -136,7 +129,20 @@
         max-height: 10em;
         top: 70px;
     }
-@media screen and (max-width:1225px) {
+    /* arrow showing current acordeon menu*/
+    .page:target .btn::before {
+        content: "";
+        position: fixed;
+        top: 63px;
+        width: 14px;
+        height: 14px;
+        margin-left: 15px;
+        background: skyblue;
+        bottom: -7px;
+        transform: rotate(45deg);
+        z-index: 2;
+    }
+@media screen and (max-width:1300px) {
     .show-menu, .hide-menu {
         display: block;
     }
@@ -171,12 +177,9 @@
     #chk:checked ~ .Menu {
         left: 0;
     }
-    /* .Menu li a:hover {
-        color: #3498db;
-    } */
-    /* .show-menu:hover, .hide-menu:hover {
-        background-color: #3498db;
-    } */
+    /* ---------------------------- */
+    /* Acordeon menu */
+    /* ---------------------------- */
     .page {
         border-top: 1px solid black;
         overflow: hidden;
@@ -188,20 +191,21 @@
         color: white;
         position: relative;
     }
-    .btn::before {
+    .page:target .btn::before {
         content: "";
         position: absolute;
         width: 14px;
         height: 14px;
         background: skyblue;
+        top: 43px;
         left: 20;
         bottom: -7px;
         transform: rotate(45deg)
     }
     .subpage {
         position: static;
-        background:lightgray;
         top: 0;
+        background:lightgray;
         overflow: hidden;
         transition: max-height 0.3s;
         max-height: 0;
