@@ -45,10 +45,13 @@
         white-space: nowrap;
     }
     .Menu li {
-        padding: 0 2%;
+        margin: 0 2%;
         display: inline-block;
     }
-    .Menu a:hover {
+    .small-screen {
+        display: none;
+    }
+    .Menu li a:hover {
         color: #0652DD;
     }
     #chk {
@@ -95,6 +98,9 @@
         display: block;
         padding: 20px;
     }
+    .small-screen {
+        display: block;
+    }
     .hide-menu {
         position: absolute;
         top: 40px;
@@ -104,7 +110,7 @@
     #chk:checked ~ .Menu {
         left: 0;
     }
-    .Menu a:hover {
+    .Menu li a:hover {
         color: #3498db;
     }
     .show-menu:hover, .hide-menu:hover {
