@@ -89,6 +89,9 @@
         color: white;
         position: relative;
     }
+    .small-screen {
+        display: none;
+    }
     .subpage {
         position: absolute;
         top: 70px;
@@ -144,7 +147,7 @@
         z-index: 2;
     }
 @media screen and (max-width:1300px) {
-    .show-menu, .hide-menu {
+    .show-menu, .hide-menu, .small-screen {
         display: block;
     }
     .Menu {
