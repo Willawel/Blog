@@ -53,7 +53,7 @@
     .Menu li a:hover {
         color: #0652DD;
     }
-    #chk {
+    input {
         position: absolute;
         visibility: hidden;
         top: 0;
@@ -192,7 +192,9 @@
         color: white;
         position: relative;
     }
-    .page:target .btn::before {
+    /* arrow showing current acordeon menu*/
+    /* .page:target .btn::before { */
+    input:checked .btn::before {
         content: "";
         position: absolute;
         width: 14px;
@@ -230,7 +232,29 @@
         transition: 0.3s;
         opacity: 0;
     }
-    .subpage a:hover::before {
+    /* .page:target .subpage { */
+    input[type="radio"]:checked .subpage{
+        max-height: 10em;
+    }
+    /* ---------------------------- */
+    /* Page-content menu */
+    /* ---------------------------- */
+    .page-content {
+        display: block;
+        position: absolute;
+        top: 43px;
+        left: 55%;
+        opacity: 0;
+        background:black;
+        width: 40%;
+    }
+    .page-content-hide {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    /* .page-content:target {
         opacity: 1;
     }
     .page:target .subpage {
