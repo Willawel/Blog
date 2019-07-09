@@ -125,14 +125,15 @@
     .subpage a:hover::before {
         opacity: 1;
     }
-    .page:target .subpage {
+    .page:hover .subpage {
         max-height: 10em;
         top: 70px;
     }
     /* arrow showing current acordeon menu*/
-    .page:target .btn::before {
+    .page:hover .subpage::before {
         content: "";
         position: fixed;
+        display: block;
         top: 63px;
         width: 14px;
         height: 14px;
@@ -234,6 +235,9 @@
     }
     .page:target .subpage {
         max-height: 10em;
+    }
+    .page:hover .subpage::before {
+        display: none;
     }
 }
 
