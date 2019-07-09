@@ -89,6 +89,9 @@
         color: white;
         position: relative;
     }
+    .small-screen {
+        display: none;
+    }
     .subpage {
         position: absolute;
         top: 70px;
@@ -125,6 +128,9 @@
     .subpage a:hover::before {
         opacity: 1;
     }
+
+/* Hover effect only for big screen */
+@media screen and (min-width:1300px) {  
     .page:hover .subpage {
         max-height: 10em;
         top: 70px;
@@ -143,8 +149,11 @@
         transform: rotate(45deg);
         z-index: 2;
     }
+}
+
+/* Styles only for small screen  */
 @media screen and (max-width:1300px) {
-    .show-menu, .hide-menu {
+    .show-menu, .hide-menu, .small-screen {
         display: block;
     }
     .Menu {
@@ -165,9 +174,6 @@
         display: block;
         padding: 0;
     }
-    /* .small-screen {
-        display: block;
-    } */
     .hide-menu {
         position: absolute;
         top: 15px;
@@ -184,6 +190,8 @@
     .page {
         border-top: 1px solid black;
         overflow: hidden;
+        width: 50%;
+        min-width: 225px;
     }
     .btn {
         display: block;
@@ -193,8 +201,7 @@
         position: relative;
     }
     /* arrow showing current acordeon menu*/
-    /* .page:target .btn::before { */
-    input:checked .btn::before {
+    .page:target .btn::before {
         content: "";
         position: absolute;
         width: 14px;
@@ -212,10 +219,11 @@
         overflow: hidden;
         transition: max-height 0.3s;
         max-height: 0;
+        padding-right: 40px;
     }
     .subpage a {
         display: block;
-        padding: 16px 26px;
+        padding: 10px 26px;
         color: white;
         font-size: 14px;;
         margin: 4px 0;
@@ -232,8 +240,7 @@
         transition: 0.3s;
         opacity: 0;
     }
-    /* .page:target .subpage { */
-    input[type="radio"]:checked .subpage{
+    .page:target .subpage {
         max-height: 10em;
     }
     /* ---------------------------- */
@@ -257,12 +264,15 @@
     /* .page-content:target {
         opacity: 1;
     }
-    .page:target .subpage {
+    .page-content:target .subpage {
         max-height: 10em;
+    } */
+    input[type="radio"]:checked ~ .page-content {
+        opacity: 1;
     }
-    .page:hover .subpage::before {
-        display: none;
-    }
+    /* input[type="radio"]:not(:checked) ~ .page-content {
+        opacity: 0;
+    } */
 }
 
 
