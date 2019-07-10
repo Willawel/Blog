@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Willawel - Welkom</title>
-        <link rel="stylesheet" href="./styles_new.css">
+        <link rel="stylesheet" href="./styles_small_screen.css">
+        <link rel="stylesheet" href="./styles_big_screen.css">
     </head>
     <body>
         <!-- header -->
@@ -21,28 +22,72 @@
                 <img class="show-menu" src="./Icon/menu.png" alt="Menu">
             </label>
             <ul class="Menu">
-                <!-- Welkom -->
-                <li class="page">
-                    <input type="radio" name="navigation" id="welkom">
-                    <label for="welkom">
-                        <a class="btn small-screen" href="https://willawel.github.io/Blog/index.html">Welkom</a>
-                    </label>
-                </li>
-                <!-- Woordwonder -->
-                <li class="page">
-                    <input type="radio" name="navigation" id=woordwonder>
-                    <label for="woordwonder">
-                        <a class="btn" href="https://willawel.github.io/Blog/woordwonder.html">Woordwonder</a>
-                    </label>
-                </li>
-                <!-- 280 Tekens -->
-                <li class="page">
-                    <input type="radio" name="navigation" id="twitter">
-                    <label for="twitter">                
-                        <a class="btn">In 280 tekens</a>
-                    </label>
-                    <div class="subpage">
-                        <a href="#twitter2018" id=twitter>2018</a>
+                <!-- Acordeon menu -->
+                <div class="wrap">
+                    <div>
+                        <!-- Welkom -->
+                        <li class="page">
+                            <input type="radio" name="navigation" id="welkom">
+                            <label for="welkom">
+                                <a class="btn small-screen" href="https://willawel.github.io/Blog/index.html">Welkom</a>
+                            </label>
+                        </li>
+                        <!-- Woordwonder -->
+                        <li class="page">
+                            <input type="radio" name="navigation" id=woordwonder>
+                            <label for="woordwonder">
+                                <a class="btn" href="https://willawel.github.io/Blog/woordwonder.html">Woordwonder</a>
+                            </label>
+                        </li>
+                        <!-- 280 Tekens -->
+                        <li class="page">
+                            <input type="radio" name="navigation" id="twitter">
+                            <label for="twitter">                
+                                <a class="btn">In 280 tekens</a>
+                            </label>
+                            <div class="subpage">
+                                <a href="#twitter2018" id=twitter>2018</a>
+                                <a href="#twitter2019" id="twitter">2019</a>
+                            </div>
+                        </li>
+                        <!-- Dichtwerk -->
+                        <li class=page>
+                            <a class="btn" href="https://willawel.github.io/Blog/dichtwerk.html">Dichtwerk</a>
+                        </li>
+                        <!-- Uitkijk -->
+                        <li class=page>
+                            <input type="radio" name="navigation" id="uitkijk">
+                            <label for="uitkijk">
+                                <a class="btn">Uitkijk</a>  
+                            </label>
+                            <div class="subpage">
+                                    <a href="#uitkijk_kleurenblind" id="uitkijk">De kleuren van het seizoen</a>
+                            </div>
+                        </li>
+                        <!-- Klimaat -->
+                        <li class=page>
+                            <input type="radio" name="navigation" id="klimaat">
+                            <label for="klimaat">
+                                <a class="btn">Save the Planet</a>  
+                            </label>
+                            <div class=subpage>
+                                <a href="#klimaat_dutch">Nederlands</a>
+
+                                <a href="#klimaat_english">English</a>
+
+                            </div>
+                        </li>
+                        <!-- Gezien -->
+                        <li class=page>
+                            <a class="btn" href="https://willawel.github.io/Blog/gezien.html">Gezien</a>
+                        </li>
+                        <!-- Contact -->
+                        <li class=page>
+                            <a class="btn" href="https://willawel.github.io/Blog/contact.html">Contact</a>
+                        </li>
+                    </div>
+                <!-- Page specific content-table -->
+                    <div>
                         <ul class="page-content" id="twitter2018">
                             <a href="https://willawel.github.io/Blog/280tekens-2018.html"><h2>In 280 tekens</h2>2018</a>
                             <a href="https://willawel.github.io/Blog/280tekens-2018.html#1">Vrucht</a>
@@ -60,7 +105,6 @@
                             <a href="https://willawel.github.io/Blog/280tekens-2018.html#13">Vuurwerk</a>
                             <a href="https://willawel.github.io/Blog/280tekens-2018.html#14">Vredeswens</a>
                         </ul>
-                        <a href="#twitter2019" id="twitter">2019</a>
                         <ul class="page-content" id="twitter2019">
                             <a href="https://willawel.github.io/Blog/280tekens-2018.html"><h2>In 280 tekens</h2>2019</a>
                             <a href="280tekens-2019.html#1">Kleine helden</a>
@@ -73,50 +117,18 @@
                             <a href="280tekens-2019.html#8">Pot</a>
                             <a href="280tekens-2019.html#9">Stroom</a>
                         </ul>
-                    </div>
-                </li>
-                <!-- Dichtwerk -->
-                <li class=page>
-                    <a class="btn" href="https://willawel.github.io/Blog/dichtwerk.html">Dichtwerk</a>
-                </li>
-                <!-- Uitkijk -->
-                <li class=page>
-                    <input type="radio" name="navigation" id="uitkijk">
-                    <label for="uitkijk">
-                        <a class="btn">Uitkijk</a>  
-                    </label>
-                    <div class="subpage">
-                            <a href="#uitkijk_kleurenblind" id="uitkijk">De kleuren van het seizoen</a>
-                            <ul class="page-content" id="uitkijk_kleurenblind">
-                                <a href="https://willawel.github.io/Blog/kleurenblind.html"><h2>Uitkijk</h2>De kleuren van het seizoen</a>
-                            </ul>
-                    </div>
-                </li>
-                <!-- Klimaat -->
-                <li class=page>
-                    <input type="radio" name="navigation" id="klimaat">
-                    <label for="klimaat">
-                        <a class="btn">Save the Planet</a>  
-                    </label>
-                    <div class=subpage>
-                        <a href="#klimaat_dutch">Nederlands</a>
+                        <ul class="page-content" id="uitkijk_kleurenblind">
+                            <a href="https://willawel.github.io/Blog/kleurenblind.html"><h2>Uitkijk</h2>De kleuren van het seizoen</a>
+                        </ul>
                         <ul class="page-content" id="klimaat_dutch">
                             <a href="https://willawel.github.io/Blog/klimaat-dutch.html"><h2>Save the Planet</h2>Nederlands</a>
                         </ul>
-                        <a href="#klimaat_english">English</a>
                         <ul class="page-content" id="klimaat_english">
                             <a href="https://willawel.github.io/Blog/klimaat-english.html"><h2>Save the Planet</h2>English</a>
                         </ul>
                     </div>
-                </li>
-                <!-- Gezien -->
-                <li class=page>
-                    <a class="btn" href="https://willawel.github.io/Blog/gezien.html">Gezien</a>
-                </li>
-                <!-- Contact -->
-                <li class=page>
-                    <a class="btn" href="https://willawel.github.io/Blog/contact.html">Contact</a>
-                </li>
+                    <!-- hide menu button -->
+                </div>
                 <label for="chk">
                     <img class="hide-menu" src="./Icon/close.png" alt="Close">
                 </label>

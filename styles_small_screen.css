@@ -1,0 +1,220 @@
+@media screen and (max-width:1225px) {
+/* =====================================================================================================
+GENERAL
+======================================================================================================== */
+    *{
+        margin: 0%;
+        padding: 0%;
+        font-family: "Montserrat", sans-serif;
+    }
+    html, body {
+        height: 100%;
+        width: 100%;
+        background: whitesmoke;
+    }
+/* =====================================================================================================
+HEADER
+======================================================================================================== */
+    .Header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: lightslategray;
+        z-index: 1;
+        height: 70px;
+    }
+    .Willawel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 60px;
+        width: 225px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: skyblue;
+        text-align: center;
+    }
+    .Header a {
+        text-decoration: none;
+        color: white;
+    }
+    .show-menu, .hide-menu {
+        width: 30px;
+        padding: 5px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .show-menu {
+        float: right;
+        background-color: skyblue;
+        border-radius: 100%;
+        margin-top: 15px;
+        margin-right: 25px;
+    }
+/* =====================================================================================================
+MENU: GENERAL
+======================================================================================================== */
+    .Menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        background: #333;
+        text-align: left;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 1s;
+        overflow: auto;
+    }
+    .wrap {
+        padding: 0 5%;
+        width: 100%;
+        min-width: 500px;
+    }
+    .Menu li {
+        display: block;
+        padding: 0;
+    }
+    .hide-menu {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 30px;
+    }
+    #chk:checked ~ .Menu {
+        left: 0;
+    }
+
+/* =====================================================================================================
+MENU: 1) ACORDEON MENU
+======================================================================================================== */
+    /* hide radio checkboxes */
+    input {
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        right: 0;
+    }
+    .page {
+        border-top: 1px solid black;
+        overflow: hidden;
+    }
+    .btn {
+        display: block;
+        padding: 16px 20px;
+        background: skyblue;
+        color: white;
+        position: relative;
+        text-transform: uppercase;
+    }
+    /* arrow showing current acordeon menu*/
+    .btn::before {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background: skyblue;
+        top: 43px;
+        left: 20;
+        bottom: -7px;
+        transform: rotate(45deg);
+    }
+    .subpage {
+        position: static;
+        top: 0;
+        background:lightgray;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        max-height: 0;
+        padding-right: 40px;
+        /* min-width: 135px; */
+        /* line-height: normal; */
+        /* padding-top: 0; */
+    }
+    .subpage a {
+        display: block;
+        padding: 10px 26px;
+        color: white;
+        font-size: 14px;;
+        margin: 4px 0;
+        position: relative;
+        text-transform: uppercase;
+        /* text-align: left; */
+        /* z-index: 1; */
+    }
+    /* subpage hover indicator (red line) */
+    .subpage a:before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 100%;
+        background: red;
+        left: 0;
+        top: 0;
+        transition: 0.3s;
+        opacity: 0;
+    }
+    /* show subpage hover indicator (red line) on hover */
+    .subpage a:hover::before {
+        opacity: 1;
+    }
+    /* subpage visibility toggle */
+    input[type="radio"]:checked ~ .subpage {
+        max-height: 10em;
+    }
+/* =====================================================================================================
+MENU: 2) TABLE OF CONTENT (PAGE SPECIFIC)
+======================================================================================================== */
+    /* */
+    .wrap div {
+        margin-left: 1.25%;
+        width: 42.5%;
+        min-width: 225px;
+        float: left;
+        z-index: 5;
+    }    
+    /* Table of content general settings */
+    .page-content {
+        /* display: block; */
+        display: none;
+        /* position: absolute; */
+        top: 80px;
+        /* left: 55%; */
+        /* opacity: 0; */
+        background:black;
+        width: 100%;
+        /* width: 40%; */
+    }
+    /* Table of content toggle */
+    .page-content:target {
+        /* opacity: 1; */
+        display: block;
+    }
+    /*show links under eachother instead of next to eachother */
+    .page-content a {
+        display: block;
+    }
+/* =====================================================================================================
+CONTENT
+======================================================================================================== */
+    .Content {
+        padding-top: 75px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .block  {
+        border: solid black 1px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        overflow: auto;
+        padding: 5%;
+        background-color: white;   
+        width: 90%;
+        overflow-y: auto;
+    }
+    .block img {
+        width: 100%;
+    }
+}
