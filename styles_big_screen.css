@@ -1,5 +1,7 @@
-@media screen and (min-width:1225px) {  
-    /* General */
+@media screen and (min-width:1226px) {
+/* =====================================================================================================
+GENERAL
+======================================================================================================== */
     *{
         margin: 0%;
         padding: 0%;
@@ -10,7 +12,9 @@
         width: 100%;
         background: whitesmoke;
     }
-    /* Header */
+/* =====================================================================================================
+HEADER
+======================================================================================================== */
     .Header {
         position: fixed;
         top: 0;
@@ -34,6 +38,9 @@
         text-decoration: none;
         color: white;
     }
+/* =====================================================================================================
+MENU: GENERAL
+======================================================================================================== */
     .Menu {
         position: absolute;
         top: 0;
@@ -48,9 +55,6 @@
         margin: 0 2%;
         display: inline-block;
     }
-    .small-screen {
-        display: none;
-    }
     .Menu li a:hover {
         color: #0652DD;
     }
@@ -59,40 +63,19 @@
         visibility: hidden;
         top: 0;
         right: 0;
-        z-index: 2;
     }
-    .show-menu, .hide-menu {
-        width: 30px;
-        padding: 5px;
-        transition: 0.5s;
-        display: none;
-        cursor: pointer;
-    }
-    .show-menu {
-        float: right;
-        background-color: skyblue;
-        border-radius: 100%;
-        width: 30px;
-        margin-top: 15px;
-        margin-right: 25px;
-    }
-    /* ---------------------------- */
-    /* Acordeon menu */
-    /* ---------------------------- */
+/* =====================================================================================================
+MENU: 1) ACORDEON MENU
+======================================================================================================== */
     .page {
-        /* border-top: 1px solid black; */
         overflow: hidden;
     }
     .btn {
         display: block;
-        /* padding: 0px 20px; */
-        /* background: skyblue; */
         color: white;
         position: relative;
     }
-    .small-screen {
-        display: none;
-    }
+    /* general subpage settingq */
     .subpage {
         position: absolute;
         top: 70px;
@@ -104,6 +87,7 @@
         line-height: normal;
         padding-top: 0px;
     }
+    /* style subpage tekst */
     .subpage a {
         display: block;
         padding: 5px 10px;
@@ -126,31 +110,11 @@
         transition: 0.3s;
         opacity: 0;
     }
+    /* show subpages indicator on hover */
     .subpage a:hover::before {
         opacity: 1;
     }
-
-
-    /* =============================
-    page content table
-    ============================= */
-    .page-content {
-        /* display: block; */
-        display: none;
-        /* position: absolute; */
-        top: 80px;
-        /* left: 55%; */
-        /* opacity: 0; */
-        background:black;
-        /* width: 40%; */
-    }
-    .page-content a {
-        display: block;
-    }
-    .page-content:target {
-        /* opacity: 1; */
-        display: block;
-    }
+    /* show subpage on hover */
     .page:hover .subpage {
         max-height: 10em;
         top: 70px;
@@ -167,28 +131,85 @@
         background: skyblue;
         bottom: -7px;
         transform: rotate(45deg);
-        z-index: 2;
     }
-
-    /* ================================= */
-    /* Page Content */
-    /* ================================= */
+/* =====================================================================================================
+MENU: 2) TABLE OF CONTENT (PAGE SPECIFIC)
+======================================================================================================== */
+    .wrap-rightcolumn {
+        position: fixed;
+        right: 2.5%;
+        top: 50%;
+        margin-top: -250px;
+        height: 500px;
+        width: 20vw;
+        border-radius: 10px;
+    }
+    .page-content {
+        display: none;
+        top: 80px;
+        background:lightgray;
+        height: 500px;
+        overflow: auto;
+        border-radius: 10px;
+    }
+    .page-content a {
+        display: block;
+        line-height: normal;
+        padding: 1%;
+    }
+    .page-content:target {
+        display: block;
+    }
+    .page-content-title {
+        text-align: center;
+        background: lightseagreen;
+        padding: 1%;
+        margin-bottom: 2%;
+    }
+    .page-content a:not(:first-child) {
+        text-align: left;
+        text-transform: uppercase;
+    }
+    .page-content a h2 {
+        text-transform: none;
+    }
+/* =====================================================================================================
+CONTENT
+======================================================================================================== */
     .Content {
         padding-top: 75px;
         margin-left: 5%;
-        margin-right: 5%;
+        width: 70%;
+        /* width: 90%; */
     }
+    /* update Content-width to make place for content table if one is selected */
+    /* .page-content:target ~ .Content {
+        width: 70%;
+    } */
     .block  {
         border: solid black 1px;
         margin-top: 5%;
         margin-bottom: 5%;
+        /* margin-right: 5%; */
+        margin-right: 25%;
         overflow: auto;
         padding: 5%;
-        background-color: white;   
+        background-color: white;
         width: 90%;
         overflow-y: auto;
     }
     .block img {
         width: 100%;
+    }
+    /* update block-margins to make place for content table if one is selected */
+    /* .block: {
+        margin-right: 25%;
+    } */
+/* =====================================================================================================
+GENERAL: SETTTING THAT SHOULD OVERRULE ALL OTHER
+======================================================================================================== */
+    /* hide everything that isn't required for the big screen */
+    .small-screen, .show-menu, .hide-menu {
+        display: none;
     }
 }

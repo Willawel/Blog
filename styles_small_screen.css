@@ -70,7 +70,6 @@ MENU: GENERAL
     }
     .wrap {
         margin: 0 5%;
-        /* padding: 0 5%; */
         width: 100%;
         min-width: 740px;
     }
@@ -92,7 +91,6 @@ MENU: GENERAL
     #chk:checked ~ .Menu {
         left: 0;
     }
-
 /* =====================================================================================================
 MENU: 1) ACORDEON MENU
 ======================================================================================================== */
@@ -114,6 +112,7 @@ MENU: 1) ACORDEON MENU
         color: white;
         position: relative;
         text-transform: uppercase;
+        cursor: pointer;
     }
     /* arrow showing current acordeon menu*/
     .btn::before {
@@ -135,9 +134,6 @@ MENU: 1) ACORDEON MENU
         transition: max-height 0.3s;
         max-height: 0;
         padding-right: 40px;
-        /* min-width: 135px; */
-        /* line-height: normal; */
-        /* padding-top: 0; */
     }
     .subpage a {
         display: block;
@@ -147,8 +143,6 @@ MENU: 1) ACORDEON MENU
         margin: 4px 0;
         position: relative;
         text-transform: uppercase;
-        /* text-align: left; */
-        /* z-index: 1; */
     }
     /* subpage hover indicator (red line) */
     .subpage a:before {
@@ -178,33 +172,32 @@ MENU: 2) TABLE OF CONTENT (PAGE SPECIFIC)
         width: 43.75%;
         padding-left: 1.25%;
     }
-    /* .wrap div {
-        margin-left: 1.25%;
-        width: 42.5%;
-        min-width: 225px;
-        float: left;
-        z-index: 5;
-    }     */
     /* Table of content general settings */
     .page-content {
-        /* display: block; */
         display: none;
-        /* position: absolute; */
         top: 80px;
-        /* left: 55%; */
-        /* opacity: 0; */
-        background:black;
+        background:lightgray;
         width: 100%;
-        /* width: 40%; */
     }
     /* Table of content toggle */
     .page-content:target {
-        /* opacity: 1; */
         display: block;
     }
     /*show links under eachother instead of next to eachother */
     .page-content a {
         display: block;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 1%;
+    }
+    .page-content a h2 {
+        text-transform: none;
+    }
+    .page-content-title {
+        text-align: center;
+        background: lightseagreen;
+        padding: 1%;
+        margin-bottom: 2%;
     }
 /* =====================================================================================================
 CONTENT
