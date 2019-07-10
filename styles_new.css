@@ -201,7 +201,8 @@
         position: relative;
     }
     /* arrow showing current acordeon menu*/
-    .page:target .btn::before {
+    /* .page:target .btn::before { */
+    .btn::before {
         content: "";
         position: absolute;
         width: 14px;
@@ -210,7 +211,7 @@
         top: 43px;
         left: 20;
         bottom: -7px;
-        transform: rotate(45deg)
+        transform: rotate(45deg);
     }
     .subpage {
         position: static;
@@ -234,13 +235,14 @@
         position: absolute;
         width: 6px;
         height: 100%;
-        background: skyblue;
+        background: red;
         left: 0;
         top: 0;
         transition: 0.3s;
         opacity: 0;
     }
-    .page:target .subpage {
+    /* .page:target .subpage { */
+    input[type="radio"]:checked ~ .subpage {
         max-height: 10em;
     }
     /* ---------------------------- */
@@ -261,18 +263,9 @@
         top: 0;
         right: 0;
     }
-    /* .page-content:target {
+    .page-content:target {
         opacity: 1;
     }
-    .page-content:target .subpage {
-        max-height: 10em;
-    } */
-    input[type="radio"]:checked ~ .page-content {
-        opacity: 1;
-    }
-    /* input[type="radio"]:not(:checked) ~ .page-content {
-        opacity: 0;
-    } */
 }
 
 
