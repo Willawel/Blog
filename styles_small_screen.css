@@ -69,9 +69,15 @@ MENU: GENERAL
         overflow: auto;
     }
     .wrap {
-        padding: 0 5%;
+        margin: 0 5%;
+        /* padding: 0 5%; */
         width: 100%;
-        min-width: 500px;
+        min-width: 740px;
+    }
+    .wrap-leftcolumn {
+        float: left;
+        width: 43.75%;
+        margin-right: 1.25%;
     }
     .Menu li {
         display: block;
@@ -167,14 +173,18 @@ MENU: 1) ACORDEON MENU
 /* =====================================================================================================
 MENU: 2) TABLE OF CONTENT (PAGE SPECIFIC)
 ======================================================================================================== */
-    /* */
-    .wrap div {
+    .wrap-rightcolumn {
+        float: left;
+        width: 43.75%;
+        padding-left: 1.25%;
+    }
+    /* .wrap div {
         margin-left: 1.25%;
         width: 42.5%;
         min-width: 225px;
         float: left;
         z-index: 5;
-    }    
+    }     */
     /* Table of content general settings */
     .page-content {
         /* display: block; */
