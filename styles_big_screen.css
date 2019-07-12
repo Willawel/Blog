@@ -79,7 +79,6 @@ MENU: GENERAL
     }
     /* position 2 level submenu to be next 1lsvel submenu instead of underneath*/
     .Menu ul ul ul {
-        margin-left: 146px;
         top: 0;
         position: absolute;
     }
@@ -113,12 +112,32 @@ SPECIFIC STYLES FOR MENUS
         line-height: 25px;
         padding: 2px 10px;
     }
+    .c_twitter {
+        margin-left: 146px;
+    }
 /* dichtwerk */
 
 /* uitkijk */
+    .s_uitkijk {
+        width: 250px;
+        margin-left: -20px;
+        line-height: 25px;
+        padding: 2px 10px;   
+    }
+    .c_uitkijk {
+        margin-left: 260px;
+    }
 
 /* save the planet */
-
+    .s_klimaat {
+        width: 164px;
+        margin-left: -20px;
+        line-height: 25px;
+        padding: 2px 10px;  
+    }
+    .c_klimaat {
+        margin-left: 174px;
+    }
 /* gezien */
 
 
