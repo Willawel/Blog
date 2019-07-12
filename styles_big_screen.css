@@ -103,7 +103,6 @@ MENU: GENERAL
 SPECIFIC STYLES FOR MENUS
 ======================================================================================================== */
 /* Woordwonder */
-
 /* in 280 tekens */
     .s_twitter {
         width: 136px;
@@ -115,7 +114,6 @@ SPECIFIC STYLES FOR MENUS
         margin-left: 146px;
     }
 /* dichtwerk */
-
 /* uitkijk */
     .s_uitkijk {
         width: 250px;
@@ -126,7 +124,6 @@ SPECIFIC STYLES FOR MENUS
     .c_uitkijk {
         margin-left: 260px;
     }
-
 /* save the planet */
     .s_klimaat {
         width: 164px;
@@ -138,41 +135,6 @@ SPECIFIC STYLES FOR MENUS
         margin-left: 174px;
     }
 /* gezien */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* =====================================================================================================
 MENU: 1) ACORDEON MENU
@@ -236,84 +198,20 @@ MENU: 1) ACORDEON MENU
         transform: rotate(45deg);
     } */
 /* =====================================================================================================
-MENU: 2) TABLE OF CONTENT (PAGE SPECIFIC)
-======================================================================================================== */
-    /* .page-content {
-        float: left;
-        display: block;
-    } */
-    /* .nav li li {
-        float: left;
-    }
-    .nav li li a {
-        display: block;
-    }
-    .nav li:hover ul ul {
-        display: none;
-    }
-    .nav li:hover ul {
-        display: block;
-    }
-    .nav li li:hover ul {
-        display: block;
-    } */
-    /* .wrap-rightcolumn {
-        position: fixed;
-        right: 2.5%;
-        top: 50%;
-        margin-top: -250px;
-        height: 500px;
-        width: 20vw;
-        border-radius: 10px;
-    } */
-    /* .page-content {
-        display: none;
-        top: 80px;
-        background:lightgray;
-        height: 500px;
-        overflow: auto;
-        border-radius: 10px;
-    } */
-    /* .page-content a {
-        display: block;
-        line-height: normal;
-        padding: 1%;
-    } */
-    /* .page-content:target {
-        display: block;
-    } */
-    /* .page-content-title {
-        text-align: center;
-        background: lightseagreen;
-        padding: 1%;
-        margin-bottom: 2%;
-    }
-    .page-content a:not(:first-child) {
-        text-align: left;
-        text-transform: uppercase;
-    }
-    .page-content a h2 {
-        text-transform: none;
-    } */
-/* =====================================================================================================
 CONTENT
 ======================================================================================================== */
     .Content {
         padding-top: 75px;
         margin-left: 5%;
-        width: 70%;
-        /* width: 90%; */
+        /* width: 70%; */
+        width: 90%;
     }
-    /* update Content-width to make place for content table if one is selected */
-    /* .page-content:target ~ .Content {
-        width: 70%;
-    } */
     .block  {
         border: solid black 1px;
         margin-top: 5%;
         margin-bottom: 5%;
         /* margin-right: 5%; */
-        margin-right: 25%;
+        /* margin-right: 25%; */
         overflow: auto;
         padding: 5%;
         background-color: white;
@@ -323,10 +221,9 @@ CONTENT
     .block img {
         width: 100%;
     }
-    /* update block-margins to make place for content table if one is selected */
-    /* .block: {
-        margin-right: 25%;
-    } */
+    #test:checked ~ .block {
+        width: 70%;
+    }
 /* =====================================================================================================
 GENERAL: SETTTING THAT SHOULD OVERRULE ALL OTHER
 ======================================================================================================== */
@@ -335,7 +232,7 @@ GENERAL: SETTTING THAT SHOULD OVERRULE ALL OTHER
         display: none;
     }
     /* hide all input checkboxes on the page*/
-    input {
+    input:not([id="test"]) {
         position: absolute;
         visibility: hidden;
         top: 0;
