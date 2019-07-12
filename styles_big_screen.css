@@ -34,10 +34,10 @@ HEADER
         background-color: skyblue;
         text-align: center;
     }
-    .Header a {
+    /* .Header a {
         text-decoration: none;
         color: white;
-    }
+    } */
 /* =====================================================================================================
 MENU: GENERAL
 ======================================================================================================== */
@@ -46,18 +46,49 @@ MENU: GENERAL
         top: 0;
         left: 225px;
         line-height: 70px;
-        text-align: end;
+        min-width: 1000px;
+        /* text-align: end;
         text-decoration: none;
         text-transform: uppercase;
-        white-space: nowrap;
+        white-space: nowrap; */
     }
-    .Menu li {
+    .Menu ul {
+        list-style: none;
+    }
+    .Menu ul li {
+        background-color: lightgray;
+        /* background-color: lightslategray; */
+        width: 150px;
+        /* border: solid black 1px; */
+        float: left;
+        /* margin: 0 2%; */
+        position: relative;
+    }
+    .Menu ul li:hover {
+        background-color: yellow;
+    }
+    .Menu ul ul {
+        display: none;
+    }
+    .Menu ul li:hover > ul {
+        display: block;
+    }
+    .Menu ul ul ul {
+        margin-left: 150px;
+        top: 0;
+        position: absolute;
+    }
+
+    /* dipslay all page titles as block in the header */
+    /* .Menu .page {
         margin: 0 2%;
         display: inline-block;
-    }
-    .Menu li a:hover {
+    } */
+    /* change text-color of element in header when hovered over (all elements) */
+    /* .Menu li a:hover {
         color: #0652DD;
-    }
+    } */
+    /* hide all input checkboxes on the page*/
     input {
         position: absolute;
         visibility: hidden;
@@ -67,16 +98,21 @@ MENU: GENERAL
 /* =====================================================================================================
 MENU: 1) ACORDEON MENU
 ======================================================================================================== */
-    .page {
+    /* general setting for page-titles in header */
+    /* .page {
         overflow: hidden;
-    }
-    .btn {
+    } */
+    /* .page {
+        position: relative;
+    } */
+    /* style of page-title in header */
+    /* .btn {
         display: block;
         color: white;
         position: relative;
-    }
-    /* general subpage settingq */
-    .subpage {
+    } */
+    /* general subpage settings */
+    /* .subpage {
         position: absolute;
         top: 70px;
         min-width: 135px;
@@ -86,9 +122,9 @@ MENU: 1) ACORDEON MENU
         max-height: 0;
         line-height: normal;
         padding-top: 0px;
-    }
+    } */
     /* style subpage tekst */
-    .subpage a {
+    /* .subpage a {
         display: block;
         padding: 5px 10px;
         color: white;
@@ -97,9 +133,10 @@ MENU: 1) ACORDEON MENU
         position: relative;
         text-align: left;
         z-index: 1;
-    }
+        float: left;
+    } */
     /* subpage hover indicator */
-    .subpage a:before {
+    /* .subpage a:before {
         content: "";
         position: absolute;
         width: 6px;
@@ -109,18 +146,18 @@ MENU: 1) ACORDEON MENU
         top: 0;
         transition: 0.3s;
         opacity: 0;
-    }
+    } */
     /* show subpages indicator on hover */
-    .subpage a:hover::before {
+    /* .subpage a:hover::before {
         opacity: 1;
-    }
+    } */
     /* show subpage on hover */
-    .page:hover .subpage {
+    /* .page:hover .subpage {
         max-height: 10em;
         top: 70px;
-    }
+    } */
     /* arrow showing current acordeon menu*/
-    .page:hover .subpage::before {
+    /* .page:hover .subpage::before {
         content: "";
         position: fixed;
         display: block;
@@ -131,11 +168,30 @@ MENU: 1) ACORDEON MENU
         background: skyblue;
         bottom: -7px;
         transform: rotate(45deg);
-    }
+    } */
 /* =====================================================================================================
 MENU: 2) TABLE OF CONTENT (PAGE SPECIFIC)
 ======================================================================================================== */
-    .wrap-rightcolumn {
+    /* .page-content {
+        float: left;
+        display: block;
+    } */
+    /* .nav li li {
+        float: left;
+    }
+    .nav li li a {
+        display: block;
+    }
+    .nav li:hover ul ul {
+        display: none;
+    }
+    .nav li:hover ul {
+        display: block;
+    }
+    .nav li li:hover ul {
+        display: block;
+    } */
+    /* .wrap-rightcolumn {
         position: fixed;
         right: 2.5%;
         top: 50%;
@@ -143,24 +199,24 @@ MENU: 2) TABLE OF CONTENT (PAGE SPECIFIC)
         height: 500px;
         width: 20vw;
         border-radius: 10px;
-    }
-    .page-content {
+    } */
+    /* .page-content {
         display: none;
         top: 80px;
         background:lightgray;
         height: 500px;
         overflow: auto;
         border-radius: 10px;
-    }
-    .page-content a {
+    } */
+    /* .page-content a {
         display: block;
         line-height: normal;
         padding: 1%;
-    }
-    .page-content:target {
+    } */
+    /* .page-content:target {
         display: block;
-    }
-    .page-content-title {
+    } */
+    /* .page-content-title {
         text-align: center;
         background: lightseagreen;
         padding: 1%;
@@ -172,7 +228,7 @@ MENU: 2) TABLE OF CONTENT (PAGE SPECIFIC)
     }
     .page-content a h2 {
         text-transform: none;
-    }
+    } */
 /* =====================================================================================================
 CONTENT
 ======================================================================================================== */
