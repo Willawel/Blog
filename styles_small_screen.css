@@ -71,8 +71,8 @@ MENU: GENERAL
     /* set padding for everything related to the menu */
     .nav {
         margin: 75px 5%;
-        /* width: 90%; */
-        width: 700px;
+        width: 90%;
+        /* width: 700px; */
         /* min-width: 600px; */
         overflow: auto;
     }
@@ -164,7 +164,9 @@ MENU: 1) ACORDEON MENU
         position: absolute;
         top: 76px;
         left: 342px;
-        width: calc(700px - 342px);
+        /* width: calc(700px - 342px); */
+        width: calc(90% - 342px);
+        min-width: 350px;
         overflow: auto;
     }
     .page-content-title {
