@@ -78,14 +78,18 @@ MENU: GENERAL
     }
     /* small screen hide-menu toggle button */
     .hide-menu {
-        position: absolute;
+        position: fixed;
         top: 15px;
         right: 15px;
         width: 30px;
+        opacity: 0;
     }
     /* display menu when toggled */
     #chk:checked ~ .Menu {
         left: 0;
+    }
+    #chk:checked ~ .Menu .hide-menu {
+        opacity: 1;
     }
     /* remove list icons */
     .Menu ul {
