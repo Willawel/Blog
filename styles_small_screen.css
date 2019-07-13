@@ -1,4 +1,4 @@
-@media screen and (max-width:1225px) {
+@media screen and (max-width:1099px) {
 /* =====================================================================================================
 GENERAL
 ======================================================================================================== */
@@ -54,6 +54,7 @@ HEADER
 /* =====================================================================================================
 MENU: GENERAL
 ======================================================================================================== */
+    /* general settings for menu */
     .Menu {
         position: absolute;
         top: 0;
@@ -62,50 +63,45 @@ MENU: GENERAL
         width: 100%;
         height: 100vh;
         background: #333;
-        text-align: left;
-        padding: 80px 0;
-        line-height: normal;
+        /* text-align: left; */
+        /* line-height: normal; */
         transition: 1s;
         overflow: auto;
     }
-    .wrap {
-        margin: 0 5%;
-        width: 100%;
-        min-width: 740px;
+    /* set padding for everything related to the menu */
+    .nav {
+        margin: 75px 5%;
+        /* width: 90%; */
+        width: 700px;
+        /* min-width: 600px; */
+        overflow: auto;
     }
-    .wrap-leftcolumn {
-        float: left;
-        width: 43.75%;
-        margin-right: 1.25%;
-    }
-    .Menu li {
-        display: block;
-        padding: 0;
-    }
+    /* small screen hide-menu toggle button */
     .hide-menu {
         position: absolute;
         top: 15px;
         right: 15px;
         width: 30px;
     }
+    /* display menu when toggled */
     #chk:checked ~ .Menu {
         left: 0;
+    }
+    /* remove list icons */
+    .Menu ul {
+        list-style: none;
     }
 /* =====================================================================================================
 MENU: 1) ACORDEON MENU
 ======================================================================================================== */
-    /* hide radio checkboxes */
-    input {
-        position: absolute;
-        visibility: hidden;
-        top: 0;
-        right: 0;
-    }
     .page {
-        border-top: 1px solid black;
+        /* border-top: 1px solid black; */
         overflow: hidden;
+        /* position: relative; */
+        /* padding: 0 2%; */
     }
     .btn {
+        border-top: 1px solid black;
         display: block;
         padding: 16px 20px;
         background: skyblue;
@@ -113,6 +109,7 @@ MENU: 1) ACORDEON MENU
         position: relative;
         text-transform: uppercase;
         cursor: pointer;
+        width: 250px;
     }
     /* arrow showing current acordeon menu*/
     .btn::before {
@@ -126,26 +123,63 @@ MENU: 1) ACORDEON MENU
         bottom: -7px;
         transform: rotate(45deg);
     }
-    .subpage {
-        position: static;
-        top: 0;
-        background:lightgray;
+    /* hide submenu's */
+    .Menu ul ul {
         overflow: hidden;
-        transition: max-height 0.3s;
         max-height: 0;
-        padding-right: 40px;
+        transition: max-height 0.3s;
+        background-color: lightgray;
+        width: 290px;
     }
-    .subpage a {
-        display: block;
-        padding: 10px 26px;
-        color: white;
-        font-size: 14px;;
-        margin: 4px 0;
-        position: relative;
+    /* show submenu's when hovering over page-titles */
+    .Menu ul li:hover > ul {
+        max-height: 100%;
+    }
+    /* submenu padding (level 1 & 2)*/
+    .Menu ul ul li {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 10px;
         text-transform: uppercase;
     }
+    /* submenu lvl 1 padding */
+    .Menu ul ul li:first-child {
+        padding-top: 12px;
+        padding-bottom: 2px
+    }
+    .Menu ul ul li:last-child {
+        padding-top: 2px;
+        padding-bottom: 12px;
+    }
+    .Menu ul ul li:only-child {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    /* position 2 level submenu to be next 1level submenu instead of underneath*/
+    .Menu ul ul ul {
+        position: absolute;
+        top: 76px;
+        left: 342px;
+        width: calc(700px - 342px);
+        overflow: auto;
+    }
+    .page-content-title {
+        text-align: center;
+        background: lightseagreen;
+    }
+    /* Page specific heights for submenu level 2 */
+    .c_twitter {
+        height: 471px;
+    }
+    .c_uitkijk {
+        height: 449px;
+    }
+    .c_klimaat {
+        height: 471px;
+    }
+
     /* subpage hover indicator (red line) */
-    .subpage a:before {
+    /* .subpage a:before {
         content: "";
         position: absolute;
         width: 6px;
@@ -155,50 +189,12 @@ MENU: 1) ACORDEON MENU
         top: 0;
         transition: 0.3s;
         opacity: 0;
-    }
+    } */
     /* show subpage hover indicator (red line) on hover */
-    .subpage a:hover::before {
+    /* .subpage a:hover::before {
         opacity: 1;
-    }
-    /* subpage visibility toggle */
-    input[type="radio"]:checked ~ .subpage {
-        max-height: 10em;
-    }
-/* =====================================================================================================
-MENU: 2) TABLE OF CONTENT (PAGE SPECIFIC)
-======================================================================================================== */
-    .wrap-rightcolumn {
-        float: left;
-        width: 43.75%;
-        padding-left: 1.25%;
-    }
-    /* Table of content general settings */
-    .page-content {
-        display: none;
-        top: 80px;
-        background:lightgray;
-        width: 100%;
-    }
-    /* Table of content toggle */
-    .page-content:target {
-        display: block;
-    }
-    /*show links under eachother instead of next to eachother */
-    .page-content a {
-        display: block;
-        line-height: normal;
-        text-transform: uppercase;
-        padding: 1%;
-    }
-    .page-content a h2 {
-        text-transform: none;
-    }
-    .page-content-title {
-        text-align: center;
-        background: lightseagreen;
-        padding: 1%;
-        margin-bottom: 2%;
-    }
+    } */
+
 /* =====================================================================================================
 CONTENT
 ======================================================================================================== */
@@ -219,5 +215,19 @@ CONTENT
     }
     .block img {
         width: 100%;
+    }
+/* =====================================================================================================
+GENERAL: SETTTING THAT SHOULD OVERRULE ALL OTHER
+======================================================================================================== */
+    /* hide everything that isn't required for the small screen */
+    .big-screen {
+        display: none;
+    }
+    /* hide all input checkboxes on the page*/
+    input:not([id="test"]) {
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        right: 0;
     }
 }
