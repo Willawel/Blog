@@ -1,0 +1,221 @@
+@media screen and (min-width:1100px) {
+/* =====================================================================================================
+GENERAL
+======================================================================================================== */
+    *{
+        margin: 0%;
+        padding: 0%;
+        font-family: "Montserrat", sans-serif;
+    }
+    html, body {
+        height: 100%;
+        width: 100%;
+        background: whitesmoke;
+    }
+/* =====================================================================================================
+HEADER
+======================================================================================================== */
+    .Header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: lightslategray;
+        z-index: 1;
+        height: 70px;
+    }
+    .Willawel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 60px;
+        width: 225px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: skyblue;
+        text-align: center;
+    }
+    /* basic style for all text in (sub)menu's of the header */
+    .Header a {
+        text-decoration: none;
+        color: white;
+    }
+/* =====================================================================================================
+MENU: GENERAL
+======================================================================================================== */
+    .Menu {
+        position: absolute;
+        top: 0;
+        left: 225px;
+        /* line-height: 70px; */
+        min-width: 1000px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    /* remove the list icons for all list-elements under .Menu */
+    .Menu ul {
+        list-style: none;
+    }
+    /* add background to all li elements under .Menu */
+    .page {
+        /* background-color: lightgray; */
+        /* width: 150px; */
+        /* float: left; */
+        position: relative;
+        display: inline-block;
+        /* border: solid white 1px; */
+    }
+    .Menu ul li:hover {
+        background-color: darkcyan;
+    }
+    /* hide submenu's */
+    .Menu ul ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+    }
+    /* show submenu's when hovering over page-titles */
+    .Menu ul li:hover > ul {
+        display: block;
+    }
+    /* position 2 level submenu to be next 1lsvel submenu instead of underneath*/
+    .Menu ul ul ul {
+        top: 0;
+        position: absolute;
+    }
+    /* add correct style to Menu-buttons */
+    .page {
+        padding: 0 2%;
+        /* margin: 0 0.5%; */
+    }
+    .btn {
+        line-height: 70px;
+    }
+    /* style subpages menu */
+    .subpage li {
+        background-color: lightgray;
+    }
+    /* style page-content menu */
+    .page-content li {
+        line-height: 25px;
+        padding: 2px 10px;;
+    }
+/* =====================================================================================================
+SPECIFIC STYLES FOR MENUS
+======================================================================================================== */
+/* Woordwonder */
+/* in 280 tekens */
+    .s_twitter {
+        width: 136px;
+        margin-left: -20px;
+        line-height: 25px;
+        padding: 2px 10px;
+    }
+    .c_twitter {
+        margin-left: 146px;
+    }
+/* dichtwerk */
+    .s_dichtwerk {
+        width: 175px;
+        margin-left: -20px;
+        line-height: 25px;
+        padding: 2px 10px;
+    }
+/* uitkijk */
+    .s_uitkijk {
+        width: 250px;
+        margin-left: -20px;
+        line-height: 25px;
+        padding: 2px 10px;   
+    }
+    .c_uitkijk {
+        margin-left: 260px;
+    }
+/* save the planet */
+    .s_klimaat {
+        width: 164px;
+        margin-left: -20px;
+        line-height: 25px;
+        padding: 2px 10px;  
+    }
+    .c_klimaat {
+        margin-left: 174px;
+    }
+/* gezien */
+
+/* =====================================================================================================
+CONTENT
+======================================================================================================== */
+    .Content {
+        padding-top: 75px;
+        margin-left: 5%;
+        /* width: 70%; */
+        width: 90%;
+    }
+    .block  {
+        border: solid black 1px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        /* margin-right: 5%; */
+        /* margin-right: 25%; */
+        overflow: auto;
+        padding: 5%;
+        background-color: white;
+        width: 90%;
+        overflow-y: auto;
+    }
+    .block img {
+        width: 100%;
+    }
+    #test:checked ~ .block {
+        width: 70%;
+    }
+    /* text and images */
+    .text {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        align-items: center;
+        border: solid grey 1px;
+        background: white;
+        overflow: auto;
+        text-align: center;
+    }
+    .container {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        border: solid grey 1px;
+        background: white;
+        width: 90%;
+        overflow: auto;
+    }
+    .column-1, .column-2 {
+        float: left;
+        width: 50%;
+        margin: 1em;
+    }
+    pre {
+        white-space: pre-line;
+    }
+    img {
+        image-orientation: from-image;
+        display: block;
+        margin: auto;
+        
+    }
+/* =====================================================================================================
+GENERAL: SETTTING THAT SHOULD OVERRULE ALL OTHER
+======================================================================================================== */
+    /* hide everything that isn't required for the big screen */
+    .small-screen, .show-menu, .hide-menu {
+        display: none;
+    }
+    /* hide all input checkboxes on the page*/
+    input:not([id="test"]) {
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        right: 0;
+    }
+}
