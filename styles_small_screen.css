@@ -222,6 +222,41 @@ CONTENT
     .block img {
         width: 100%;
     }
+    /* text and images */
+    .text {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        align-items: center;
+        border: solid grey 1px;
+        background: white;
+        overflow: auto;
+        text-align: center;
+    }
+    .container {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        border: solid grey 1px;
+        background: white;
+        width: 90%;
+        overflow: auto;
+    }
+    .column-1, .column-2 {
+        float: left;
+        width: 50%;
+        margin: 1em;
+    }
+    pre {
+        white-space: pre-line;
+    }
+    img {
+        image-orientation: from-image;
+        display: block;
+        margin: auto;
+        
+    }
 /* =====================================================================================================
 GENERAL: SETTTING THAT SHOULD OVERRULE ALL OTHER
 ======================================================================================================== */

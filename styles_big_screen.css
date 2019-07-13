@@ -114,6 +114,12 @@ SPECIFIC STYLES FOR MENUS
         margin-left: 146px;
     }
 /* dichtwerk */
+    .s_dichtwerk {
+        width: 175px;
+        margin-left: -20px;
+        line-height: 25px;
+        padding: 2px 10px;
+    }
 /* uitkijk */
     .s_uitkijk {
         width: 250px;
@@ -162,6 +168,41 @@ CONTENT
     }
     #test:checked ~ .block {
         width: 70%;
+    }
+    /* text and images */
+    .text {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        align-items: center;
+        border: solid grey 1px;
+        background: white;
+        overflow: auto;
+        text-align: center;
+    }
+    .container {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 5%;
+        display: flex;
+        align-items: center;
+        border: solid grey 1px;
+        background: white;
+        width: 90%;
+        overflow: auto;
+    }
+    .column-1, .column-2 {
+        float: left;
+        width: 50%;
+        margin: 1em;
+    }
+    pre {
+        white-space: pre-line;
+    }
+    img {
+        image-orientation: from-image;
+        display: block;
+        margin: auto;
+        
     }
 /* =====================================================================================================
 GENERAL: SETTTING THAT SHOULD OVERRULE ALL OTHER
