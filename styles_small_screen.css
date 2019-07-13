@@ -82,14 +82,14 @@ MENU: GENERAL
         top: 15px;
         right: 15px;
         width: 30px;
-        opacity: 0;
+        display: none;
     }
     /* display menu when toggled */
     #chk:checked ~ .Menu {
         left: 0;
     }
     #chk:checked ~ .Menu .hide-menu {
-        opacity: 1;
+        display: block;
     }
     /* remove list icons */
     .Menu ul {
