@@ -174,7 +174,7 @@ CONTENT: text & images
         border: solid black 1px;
         /* margin-top: 5%; */
         margin-top: 1%;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
         /* margin-right: 5%; */
         /* margin-right: 25%; */
         overflow: auto;
@@ -187,24 +187,27 @@ CONTENT: text & images
         width: 100%;
     }
     .text {
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin-top: 1%;
+        margin-bottom: 2%;
+        width: 99%;
         align-items: center;
         border: solid grey 1px;
         background: white;
         overflow: auto;
         text-align: center;
+        transition: 0.5s;
     }
     .container {
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin-top: 1%;
+        margin-bottom: 2%;
         padding: 5%;
         display: flex;
         align-items: center;
         border: solid grey 1px;
         background: white;
-        width: 90%;
+        width: 89%;
         overflow: auto;
+        transition: 0.5s;
     }
     .column-1, .column-2 {
         float: left;
@@ -265,7 +268,8 @@ CONTENT: fixed content-table + contact buttons
         position: absolute;
         top: 0;
         right: 49px;
-        line-height: 50px;
+        height: 50px;
+        padding-top: 8px;
         text-align: center;
         width: calc( 100% - 50px );
         display: block;
@@ -274,18 +278,30 @@ CONTENT: fixed content-table + contact buttons
     }
     .c_table_text {
         position: relative;
-        top: 50px;;
+        top: 50px;
         left: 0;
         display: none;
-        overflow: hidden;
+        overflow: auto;
         width: calc( 100% - 10px);
         height: calc( 100% - 60px );
         transition: 0.3s;
         border-radius: 10px;
         padding: 5px;
         background-color: lightgray;
-
     }
+    .c_table_text ul {
+        padding: 10px;
+        list-style: none;
+    }
+    .c_table_text li {
+        padding: 2px 0;
+    }
+    .c_table_text a {
+        text-decoration: none;
+        color: white;
+        white-space: nowrap;
+    }
+
     /* contact icons (twitter/ mail) wrapper */
     .contact {
         position: absolute;
@@ -293,7 +309,7 @@ CONTENT: fixed content-table + contact buttons
         right: 0;
         transition: 0.5s;
     }
-    .contact p {
+    .contact a {
         /* float: left; */
         display: block;
         width: 50px;
@@ -304,9 +320,12 @@ CONTENT: fixed content-table + contact buttons
 CONTENT: fixed content-table + contact buttons -> size adjustments
 -------------------------------------------------------------------------------------------------------- */
     /* adjust width of main-content */
-    #side_menu:checked ~ .block {
+    #side_menu:checked ~ .block, #side_menu:checked ~ .container {
         width: 70%;
     }    
+    #side_menu:checked ~ .text {
+        width: 80%;
+    }
     /* adjust width of the content menu (wrap) on the side of the screen */
     #side_menu:checked ~ .c_menu {
         width: 21%;
