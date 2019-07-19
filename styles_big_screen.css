@@ -275,6 +275,7 @@ CONTENT: fixed content-table + contact buttons
         display: block;
         overflow: auto;
         display: none;
+        /* white-space: nowrap; */
     }
     .c_table_text {
         position: relative;
